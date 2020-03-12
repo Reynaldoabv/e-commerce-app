@@ -5,7 +5,7 @@ import Home from './Pages/home/Home';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App p-3">
       <Home />
     </div>
   );
