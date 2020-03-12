@@ -1,10 +1,10 @@
 import React from 'react';
-import './home.scss';
-import PropTypes from 'prop-types';
+import './home-page.scss';
+// import PropTypes from 'prop-types';
 
 import Directory from '../../components/directory/Directory';
 
-const Home = props => {
+const HomePage = props => {
     return (
         <div className="container home-page">
             <Directory />
@@ -13,8 +13,8 @@ const Home = props => {
     )
 }
 
-Home.propTypes = {
+// HomePage.propTypes = {
 
-}
+// }
 
-export default Home;
+export default HomePage;
