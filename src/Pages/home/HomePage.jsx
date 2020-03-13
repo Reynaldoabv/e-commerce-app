@@ -6,7 +6,7 @@ import Directory from '../../components/directory/Directory';
 
 const HomePage = props => {
     return (
-        <div className="container home-page">
+        <div className="container home-page mt-5">
             <Directory />
         </div>
         

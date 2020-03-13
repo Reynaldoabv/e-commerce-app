@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import PropTypes from 'prop-types';
 
 import SHOP_DATA from './Shop.data';
@@ -6,11 +6,7 @@ import CollectionPreview from '../../components/collection-preview/CollectionPre
 
 const ShopPage = props => {
 
-    const [ collections, setCollections ] = useState(
-        SHOP_DATA
-    )
-
-    console.log(collections);
+    const collections = SHOP_DATA;
 
     return (
         <div className="shop-page">

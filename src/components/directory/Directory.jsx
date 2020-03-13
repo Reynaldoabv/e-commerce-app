@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './directory.scss';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import MenuItem from '../menu-item/MenuItem';
 
 const DirectoryMenu = props => {
 
-    const [sections, setSections] = useState([
+    const sections = [
         {
           title: 'hats',
           imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -39,7 +39,7 @@ const DirectoryMenu = props => {
           id: 5,
           linkUrl: 'shop/men'
         }
-      ]);
+      ];
     
     return (
         <div className="directory-menu">
@@ -52,8 +52,8 @@ const DirectoryMenu = props => {
     )
 }
 
-DirectoryMenu.propTypes = {
+// DirectoryMenu.propTypes = {
 
-}
+// }
 
 export default DirectoryMenu;
