@@ -5,7 +5,7 @@ import './SignIn.scss';
 import FormInput from '../../components/form-input/FormInput';
 import CustomButton from '../../components/custom-button/CustomButton';
 
-import { signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 const SignIn = props => {
 
@@ -14,12 +14,17 @@ const SignIn = props => {
         password: ""
     });
 
-    const onSubmit = e => {
+    const onSubmit = async e => {
         e.preventDefault()
 
-        console.log(formData)
+        try {
+            auth.signInWithEmailAndPassword(email, password);
 
-        setFormData({ email: "", password: "" });
+            setFormData({ email: "", password: "" });
+
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     const onChange = e => {
