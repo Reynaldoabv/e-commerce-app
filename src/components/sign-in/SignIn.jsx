@@ -35,8 +35,20 @@ const SignIn = props => {
             <h2 className="title">I already have an account</h2>
             <span>Sign in with your email and password</span>
             <form onSubmit={onSubmit}>
-                <FormInput type="email" name="email" onChange={onChange} value={email} label="Email" />
-                <FormInput type="password" name="password" onChange={onChange} value={password} label="Password" />
+                <FormInput 
+                    type="email" 
+                    name="email" 
+                    onChange={onChange} 
+                    value={email} 
+                    label="Email" 
+                />
+                <FormInput 
+                    type="password" 
+                    name="password" 
+                    onChange={onChange} 
+                    value={password} 
+                    label="Password" 
+                />
                 <div className="buttons">
                     <CustomButton type="submit"> Sign In </CustomButton> 
                     <CustomButton onClick={signInWithGoogle} isGoogleSigIn > Sign In With Google</CustomButton> 
