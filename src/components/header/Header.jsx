@@ -2,6 +2,8 @@ import React from 'react';
 import './header.scss';
 // import PropTypes from 'prop-types';
 import { ReactComponent as Logo } from '../../assets/store.svg';
+import CartIcon from '../cart-icon/CartIcon';
+import CartDropdown from '../cart-dropdown/CartDropdown';
 
 import { auth } from '../../firebase/firebase.utils';
 
@@ -9,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, hidden }) => {
     return (
         <div className="header">
             <Link className="logo-container d-flex" to="/">
@@ -24,7 +26,9 @@ const Header = ({ currentUser }) => {
                     <div className="option mt-3" onClick={() => auth.signOut()}>Sign Out</div> : 
                     <Link className="option mt-3" to="/signin">Sign In</Link>
                 }
+                <CartIcon />
             </div>
+            { !hidden ? <CartDropdown /> : null }
         </div>
     )
 }
@@ -33,8 +37,9 @@ const Header = ({ currentUser }) => {
 //     currentUser: PropTypes.object.isRequired
 // }
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({ user: { currentUser}, cart: { hidden }}) => ({
+    currentUser,
+    hidden
 })
 
 export default connect(mapStateToProps)(Header);
