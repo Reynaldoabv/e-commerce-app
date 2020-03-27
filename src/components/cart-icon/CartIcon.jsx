@@ -5,13 +5,14 @@ import { ReactComponent as ShoppingCart } from '../../assets/original.svg';
 
 import { connect } from 'react-redux';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { selectCartItemsCount } from '../../redux/cart/cart.selector';
 // import PropTypes from 'prop-types'
 
-const CartIcon = ({ toggleCartHidden }) => {
+const CartIcon = ({ toggleCartHidden, itemCount }) => {
     return (
         <div className="cart-icon" onClick={toggleCartHidden}>
             <ShoppingCart className="shopping-icon" />
-            <div className="item-count">0</div>
+            <div className="item-count">{itemCount}</div>
         </div>
     )
 }
@@ -20,4 +21,8 @@ const CartIcon = ({ toggleCartHidden }) => {
 
 // }
 
-export default connect(null, {toggleCartHidden} )(CartIcon);
+const masStateToProps = state => ({
+    itemCount: selectCartItemsCount(state)
+})
+
+export default connect(masStateToProps, {toggleCartHidden} )(CartIcon);
