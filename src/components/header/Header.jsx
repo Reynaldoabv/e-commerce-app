@@ -10,6 +10,9 @@ import { auth } from '../../firebase/firebase.utils';
 import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectCartHidden } from '../../redux/cart/cart.selector';
+import { selectCurrentUser } from '../../redux/user/user.selector';
 
 const Header = ({ currentUser, hidden }) => {
     return (
@@ -20,7 +23,7 @@ const Header = ({ currentUser, hidden }) => {
             </Link>
             <div className="options">
                 <Link className="option mt-3" to="/shop">Shop</Link>
-                <Link className="option mt-3" to="/shop/contact">Contact</Link>
+                <Link className="option mt-3" to="/contact">Contact</Link>
                 {
                     currentUser ? 
                     <div className="option mt-3" onClick={() => auth.signOut()}>Sign Out</div> : 
@@ -37,9 +40,9 @@ const Header = ({ currentUser, hidden }) => {
 //     currentUser: PropTypes.object.isRequired
 // }
 
-const mapStateToProps = ({ user: { currentUser}, cart: { hidden }}) => ({
-    currentUser,
-    hidden
+const mapStateToProps = createStructuredSelector ({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
 })
 
 export default connect(mapStateToProps)(Header);
