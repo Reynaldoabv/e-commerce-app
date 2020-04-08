@@ -1,6 +1,5 @@
 import React from 'react';
 import './collection-item.scss';
-// import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
@@ -22,9 +21,5 @@ const CollectionItem = ({ addItem, item }) => {
         </div>
     )
 }
-
-// CollectionItem.propTypes = {
-
-// }
 
 export default connect(null, {addItem})(CollectionItem);
