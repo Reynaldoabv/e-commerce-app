@@ -1,6 +1,5 @@
 import React from 'react';
 import './header.scss';
-// import PropTypes from 'prop-types';
 import { ReactComponent as Logo } from '../../assets/store.svg';
 import CartIcon from '../cart-icon/CartIcon';
 import CartDropdown from '../cart-dropdown/CartDropdown';
@@ -35,10 +34,6 @@ const Header = ({ currentUser, hidden }) => {
         </div>
     )
 }
-
-// Header.propTypes = {
-//     currentUser: PropTypes.object.isRequired
-// }
 
 const mapStateToProps = createStructuredSelector ({
     currentUser: selectCurrentUser,

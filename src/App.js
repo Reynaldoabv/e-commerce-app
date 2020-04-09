@@ -12,6 +12,7 @@ import { selectCurrentUser } from './redux/user/user.selector';
 
 import Header from './components/header/Header';
 import HomePage from './Pages/home/HomePage';
+import Footer from './components/footer/Footer';
 import ShopPage from './Pages/shop/ShopPage.jsx';
 import SignInAndSignUpPage from './Pages/signIn-signUp/SignInAndSignUpPage.jsx';
 import CheckoutPage from './Pages/checkout/CheckoutPage';
@@ -71,6 +72,7 @@ class App extends React.Component {
           <Route exact path='/signin' render={() => this.props.currentUser ? ( <Redirect to='/' /> ) : ( <SignInAndSignUpPage /> )} />
           <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
+        <Footer />
       </div>
     );
   }
