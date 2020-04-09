@@ -16,6 +16,11 @@ import Footer from './components/footer/Footer';
 import ShopPage from './Pages/shop/ShopPage.jsx';
 import SignInAndSignUpPage from './Pages/signIn-signUp/SignInAndSignUpPage.jsx';
 import CheckoutPage from './Pages/checkout/CheckoutPage';
+import OurStoresPage from './Pages/our-stores/OurStores';
+import WarrantyPage from './Pages/warranty/Warranty';
+import ReturnAndExchangesPage from './Pages/returns-and-exchanges/ReturnAndExchanges';
+import TermsAndConditionsPage from './Pages/terms-and-conditions/TermsAndConditions';
+import ContactPage from './Pages/contact/Contact';
 
 class App extends React.Component {
 
@@ -71,6 +76,11 @@ class App extends React.Component {
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={() => this.props.currentUser ? ( <Redirect to='/' /> ) : ( <SignInAndSignUpPage /> )} />
           <Route exact path='/checkout' component={CheckoutPage} />
+          <Route exact path='/our-stores' component={OurStoresPage} />
+          <Route exact path='/warranty' component={WarrantyPage} />
+          <Route exact path='/return-and-exchanges' component={ReturnAndExchangesPage} />
+          <Route exact path='/terms-and-conditions' component={TermsAndConditionsPage} />
+          <Route exact path='/contact' component={ContactPage} />
         </Switch>
         <Footer />
       </div>

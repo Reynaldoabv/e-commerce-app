@@ -15,7 +15,7 @@ const Footer = props => {
                     </div>
                     <div className="text-center">
                         <Link to='/our-stores'><p className="links">Our stores</p></Link>
-                        <Link to='return-and-exchanges'><p className="links">Return & Exchanges</p></Link>
+                        <Link to='/return-and-exchanges'><p className="links">Return & Exchanges</p></Link>
                     </div>
                 </div>
                 <div className="col-4">                
@@ -24,7 +24,7 @@ const Footer = props => {
                     </div>
                     <div className="text-center">
                         <Link to='/warranty'><p className="links">Warranty</p></Link>
-                        <Link to='terms-and-conditions'><p className="links">Terms & Conditions</p></Link>
+                        <Link to='/terms-and-conditions'><p className="links">Terms & Conditions</p></Link>
                     </div>
                     <div className="text-center lines">
                         <div className="text-center">
