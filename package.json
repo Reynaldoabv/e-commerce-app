@@ -1,8 +1,8 @@
 {
-	"name": "crwn-clothing-server",
+	"name": "e-commerce-app-api",
 	"version": "1.0.0",
 	"engines": {
-	  "node": "10.19.0",
+	  "node": "10.20.1",
 	  "npm": "6.13.4"
 	},
 	"scripts": {

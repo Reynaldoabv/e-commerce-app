@@ -4,7 +4,7 @@ import GoogleMapReact from 'google-map-react';
 
 const GoogleMaps = () => {
 
-  const [defaultProps, setDefaultProps] = useState({
+  const [defaultProps] = useState({
 
     center: {
       lat: 53.350140,
