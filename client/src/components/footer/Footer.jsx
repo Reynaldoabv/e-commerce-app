@@ -11,7 +11,7 @@ const Footer = props => {
             <div className="row">
                 <div className="col-4">
                     <div className="d-flex">
-                        <h2 className="mx-auto my-auto">PURCHASE</h2>
+                        <h2 className="mx-auto my-auto">CUSTOMER SERVICE</h2>
                     </div>
                     <div className="text-center">
                         <Link to='/our-stores'><p className="links">Our stores</p></Link>

@@ -21,6 +21,7 @@ const Header = ({ currentUser, hidden }) => {
                 <h2 className="ml-3">E-Commerce App</h2>
             </Link>
             <div className="options">
+                <Link className="option mt-3" to="/about-us">About Us</Link>
                 <Link className="option mt-3" to="/shop">Shop</Link>
                 <Link className="option mt-3" to="/contact">Contact</Link>
                 {

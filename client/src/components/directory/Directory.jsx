@@ -20,11 +20,6 @@ const DirectoryMenu = ({ sections }) => {
                     </div>
                 </div>
             </div>
-            {/* <Row>
-                <Col xs={12} >
-                    <Image src={Banner} />
-                </Col>
-            </Row> */}
             {
                 sections.map(({ id, ...otherSectionProps }) => (
                     <MenuItem key={id} {...otherSectionProps }/>

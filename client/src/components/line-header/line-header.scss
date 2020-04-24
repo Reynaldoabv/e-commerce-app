@@ -1,0 +1,13 @@
+.line-header {   
+    .line {
+        background-color: #000;
+        color: #fff;
+        height: 50px;
+        width: 100%;
+        display: flex;
+
+        .lineTitle{
+            margin: auto;
+        }
+    }
+}

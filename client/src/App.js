@@ -10,6 +10,7 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selector';
 
+import LineHeader from './components/line-header/LineHeader';
 import Header from './components/header/Header';
 import HomePage from './Pages/home/HomePage';
 import Footer from './components/footer/Footer';
@@ -21,6 +22,7 @@ import WarrantyPage from './Pages/warranty/Warranty';
 import ReturnAndExchangesPage from './Pages/returns-and-exchanges/ReturnAndExchanges';
 import TermsAndConditionsPage from './Pages/terms-and-conditions/TermsAndConditions';
 import ContactPage from './Pages/contact/Contact';
+import AboutUsPage from './Pages/about-us/AboutUsPage';
 
 class App extends React.Component {
 
@@ -71,6 +73,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App p-1">
+        <LineHeader />
         <Header/>
         <Switch>
           <Route exact path='/' component={HomePage} />
@@ -82,6 +85,7 @@ class App extends React.Component {
           <Route exact path='/return-and-exchanges' component={ReturnAndExchangesPage} />
           <Route exact path='/terms-and-conditions' component={TermsAndConditionsPage} />
           <Route exact path='/contact' component={ContactPage} />
+          <Route exact path='/about-us' component={AboutUsPage} />
         </Switch>
         <Footer />
       </div>
