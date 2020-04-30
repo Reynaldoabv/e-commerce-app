@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './SignIn.scss';
-// import PropTypes from 'prop-types'
 
 import FormInput from '../../components/form-input/FormInput';
 import CustomButton from '../../components/custom-button/CustomButton';
@@ -62,9 +61,5 @@ const SignIn = props => {
         </div>
     )
 }
-
-// SignIn.propTypes = {
-
-// }
 
 export default SignIn

@@ -24,23 +24,9 @@ import TermsAndConditionsPage from './Pages/terms-and-conditions/TermsAndConditi
 import ContactPage from './Pages/contact/Contact';
 import AboutUsPage from './Pages/about-us/AboutUsPage';
 
+import TestPage from './Pages/test/Test';
+
 class App extends React.Component {
-
-  // const [ currentUser, setCurrentUser ] = useState({
-  //   currentUser: null
-  // })
-
-  
-
-  // useEffect(() => {
-
-  //   unsubcribeFromAuth = auth.onAuthStateChanged(user => {
-  //     setCurrentUser({ ...currentUser, user });
-  //     console.log(user);
-  //   });
-
-  //   //eslint-disable-next-line
-  // }, [])
 
   unsubscribeFromAuth = null;
 
@@ -61,7 +47,6 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
-      // addCollectionsAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items }) ));
     })
   }
 
@@ -86,6 +71,7 @@ class App extends React.Component {
           <Route exact path='/terms-and-conditions' component={TermsAndConditionsPage} />
           <Route exact path='/contact' component={ContactPage} />
           <Route exact path='/about-us' component={AboutUsPage} />
+          <Route exact path='/test' component={TestPage} />
         </Switch>
         <Footer />
       </div>
